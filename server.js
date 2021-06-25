@@ -9,7 +9,7 @@ const connectDB = require('./config/db') ;
 connectDB();
 
 const corsOption = {
-    origin: "http://127.0.0.1:3000, https://iamvarunking.github.io/Just-share/" 
+    origin: "http://127.0.0.1:3000, https://iamvarunking.github.io:1" 
 }
 
 app.use(cors(corsOption));
