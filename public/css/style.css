@@ -14,12 +14,13 @@
     justify-content: center;
     color: #333;
   }
-
+  
 .logo {
     position: absolute;
     top: 5px;
     left: 10px;
-    width: 250px;
+    width: 110px;
+    height: 110px;
 }
 section.download {
     background: #fff;
