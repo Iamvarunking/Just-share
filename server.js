@@ -2,14 +2,21 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
-const cors = require('cors');
 const PORT = process.env.PORT || 3000 ; 
 
 const connectDB = require('./config/db') ;
 connectDB();
 
+app.use(function(req, res, next){
+    res.header("Access-Control-Allow-Origin" , "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,PATCH,POST,DELETE,OPTIONS');
+    next();
+});
 
-app.use(cors(corsOption));
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine' , 'ejs');
