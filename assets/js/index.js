@@ -7,7 +7,7 @@ const progressBar = document.querySelector(".progress-bar");
 const progressContainer = document.querySelector(".progress-container");
 const fileURLInput = document.querySelector("#fileURL");
 const sharingContainer = document.querySelector(".sharing-container");
-const showClipboard = document.querySelector(".clip-board");
+const clipboard = document.querySelector(".clip-board");
 const emailForm = document.querySelector("#emailForm");
 const copyBtn = document.querySelector("#copyBtn");
 const host = "https://justshare-vs.herokuapp.com/";
@@ -43,6 +43,10 @@ fileInput.addEventListener("change", () => {
 browseBtn.addEventListener("click", () => {
     fileInput.click();
 });
+
+const showClipboard = (res) => {
+    clipboard.innerText = res ;
+}; 
 
 copyBtn.addEventListener("click", () => {
     fileURLInput.select()
