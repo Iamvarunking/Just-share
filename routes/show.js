@@ -11,7 +11,7 @@ router.get('/:uuid', async (req,res)=> {
             uuid: file.uuid,
             fileName: file.fileName,
             fileSize: file.size,
-            downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}`
+            downloadLink: `${process.env.APP_BASE_URL}files/download/${file.uuid}`
         });
 
 
