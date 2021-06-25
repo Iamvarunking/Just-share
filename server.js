@@ -8,9 +8,6 @@ const PORT = process.env.PORT || 3000 ;
 const connectDB = require('./config/db') ;
 connectDB();
 
-const corsOption = {
-    origin: "http://127.0.0.1:3000, https://iamvarunking.github.io" 
-}
 
 app.use(cors(corsOption));
 
